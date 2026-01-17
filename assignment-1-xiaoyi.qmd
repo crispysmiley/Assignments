@@ -1,0 +1,58 @@
+---
+title: "Assignment-1"
+subtitle: "Notes from videos"
+author: Xiaoyi Cui
+format: pdf
+---
+
+# Positron
+
+## Getting Started with Positron: A Quick Tour
+
+### Folder from Git
+
+`File`-`New Folder from Git`-enter the http (e.g.: https://github.com/posit-dev/posit-conf-2025-positron-assistant-demo.git)
+
+Underlined packages are not installed
+
+### Install Packages
+
+1. In the terminal, enter `uv venv`  to create virtual environment
+2. Enter `.venv\Scripts\activate`
+3. e.g. `uv pip install -r requirements.txt` or `uv pip install jupyter`
+
+### For Help `help()`
+
+e.g.: In the console, enter `help(p9.theme_minimal)`
+
+## Your First Python Project in Positron
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data_url = 'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2025/2025-07-01/weekly_gas_prices.csv'
+df = pd.read_csv(data_url, parse_dates=["date"])
+```
+
+
+```{python}
+filtered = df[
+    (df["fuel"] == "gasoline") &
+    (df["formulation"] == "all")
+]
+filtered = filtered.sort_values("date")
+
+for grade, group in filtered.groupby("grade"):
+    plt.plot(group["date"], group["price"], label=grade)
+
+plt.title("Gasoline prices over time")
+plt.xlabel("Date")
+plt.ylabel("Price (USD per gallon)")
+plt.legend(title="Grade")
+```
+
+### Push to Github
+
+- `Source Control` on the leftside
+- Enter a message and then commit
