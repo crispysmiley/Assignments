@@ -54,5 +54,579 @@ plt.legend(title="Grade")
 
 ### Push to Github
 
+(1) `Source Control`
 - `Source Control` on the leftside
 - Enter a message and then commit
+- click the clould button to upload a branch
+
+(2) `Posit Publisher`
+- `Posit Publisher` on the leftside
+- Can enter url to deploy on my own server
+
+# Python
+
+## Strings - Working with Textual Data
+
+```{python}
+# print hello world
+print('Hello World')
+
+my_message1 = 'Crispy\'s World'
+print(my_message1)
+
+my_message = "Crispy's World"
+print(my_message)
+```
+
+```{python}
+print(len(my_message1))
+print(len(my_message))
+```
+
+```{python Slicing}
+print(my_message[0])  # the 1st
+print(my_message[6])  # the 7th, which is "'"
+# print(my_message[15]) string index out of range
+print(my_message[0:6])  # include [0] but not include [6]
+print(my_message[:6])
+print(my_message[6:]) 
+```
+
+```{python}
+print(my_message.lower())
+print(my_message.upper())
+print(my_message.count("s"))
+print(my_message.find("s"))  # it only returns the first 's', which is [3]
+```
+
+```{python Replace}
+my_message.replace("World", "Universe")
+print(my_message)
+new_message = my_message.replace("World", "Universe")
+print(new_message)
+```
+
+```{python}
+greeting = "Hello"
+name = "Crispy"
+message = greeting + name
+print(message)
+message = greeting + ", " + name
+print(message)
+message = greeting + ", " + name + ". Welcome!"
+print(message)
+
+message = "{}, {}. Welcome!".format(greeting, name)
+print(message)
+```
+
+```{python f strings}
+message = f'{greeting}, {name}. Welcome!'
+print(message)
+message = f'{greeting}, {name.upper()}. Welcome!'
+print(message)
+```
+
+```{python help}
+print(dir(name))  # Show functions that can be applied to it
+# print(help(str))
+print(help(str.lower))
+```
+
+## Integers and Floats - Working with Numeric Data
+
+```{python}
+num=3
+print(type(num))
+```
+
+```{python}
+num=3.14
+print(type(num))
+```
+
+```{python}
+# Arithmetic Operators:
+# Addition:       3 + 2
+# Subtraction:    3 - 2
+# Multiplication: 3 * 2
+# Division:       3 / 2
+# Floor Division: 3 // 2
+# Exponent:       3 ** 2
+# Modulus:        3 % 2
+
+print(3 + 2)
+print(3 - 2)
+print(3 * 2)
+print(3 / 2)
+print(3 // 2)
+print(3**2)
+print(3 % 2)
+
+print(2 % 2)
+print(3 % 2)
+print(4 % 2)
+print(5 % 2)
+
+print(3 * 2 + 1)
+```
+
+```{python}
+num = 1
+num = num+1
+print(num)
+
+num = 1
+num *= 10
+print(num)
+```
+
+```{python}
+print(abs(-3))
+print(round(3.75))
+print(round(3.75, 1))
+```
+
+```{python}
+# Comparisons:
+# Equal:            3 == 2
+# Not Equal:        3 != 2
+# Greater Than:     3 > 2
+# Less Than:        3 < 2
+# Greater or Equal: 3 >= 2
+# Less or Equal:    3 <= 2
+
+num_1 = 3
+num_2 = 2
+print(num_1 == num_2)
+print(num_1 != num_2)
+print(num_1 > num_2)
+print(num_1 < num_2)
+print(num_1 >= num_2)
+print(num_1 <= num_2)
+```
+
+```{python}
+num_1 = "100"
+num_2 = "200"  # as str
+print(num_1 + num_2)
+
+num_1 = int(num_1)
+num_2 = int(num_2)
+print(num_1 + num_2)
+```
+
+## Lists, Tuples, and Sets
+
+### Lists
+
+```{python list}
+courses = ["History", "Math", "Physics", "CompSci"]
+print(courses)
+print(courses[0])
+print(courses[3])
+print(courses[-1])  # convenient to get the last one
+print(courses[0:2])  # include [0] but not include [2]
+print(courses[2:])
+```
+
+```{python modify list}
+courses = ["History", "Math", "Physics", "CompSci"]
+courses.append("Art")
+print(courses)
+
+courses = ["History", "Math", "Physics", "CompSci"]
+courses.insert(0, "Art")
+print(courses)
+
+courses = ["History", "Math", "Physics", "CompSci"]
+courses_2 = ["Art", "Education"]
+courses.insert(0, courses_2)
+print(courses)
+
+courses = ["History", "Math", "Physics", "CompSci"]
+courses_2 = ["Art", "Education"]
+courses.extend(courses_2)  # or courses_2.extend(courses)
+print(courses)
+
+courses = ["History", "Math", "Physics", "CompSci"]
+courses.remove("Math")
+print(courses)
+```
+
+```{python}
+courses = ["History", "Math", "Physics", "CompSci"]
+popped = courses.pop()
+print(popped)
+print(courses)
+```
+
+```{python sort}
+courses = ["History", "Math", "Physics", "CompSci"]
+courses.reverse()
+print(courses)
+
+courses = ["History", "Math", "Physics", "CompSci"]
+courses.sort()  # Alphabet
+print(courses)
+
+nums = [1, 4, 3, 5, 2]
+nums.sort() # assending
+print(nums)
+
+courses = ["History", "Math", "Physics", "CompSci"]
+courses.sort(reverse=True)  
+print(courses)
+
+nums = [1, 4, 3, 5, 2]
+nums.sort(reverse=True)
+print(nums)
+
+```
+
+```{python}
+# These methods above will change the original item
+# To avoid changing:
+
+courses = ["History", "Math", "Physics", "CompSci"]
+sorted_courses = sorted(courses)
+print(courses)
+```
+
+```{python find}
+nums = [1, 4, 3, 5, 2]
+print(min(nums))
+print(max(nums))
+print(sum(nums))
+
+courses = ["History", "Math", "Physics", "CompSci"]
+print(courses.index("CompSci")) # courses[3]
+print("Math" in courses) # True or False
+```
+
+```{python for loop}
+
+for item in courses:  # we can name it by any names we want, not just 'item'
+    print(item)
+
+
+for index, course in enumerate(courses, start=1):
+    print(index, course)
+```
+
+```{python}
+course_str = "-".join(courses)
+print(course_str)
+```
+
+```{python}
+new_list = course_str.split("-")
+print(new_list)
+```
+
+### Tuples
+
+```{python}
+# Mutable
+list_1 = ["History", "Math", "Physics", "CompSci"]
+list_2 = list_1
+
+print(list_1)
+print(list_2)
+
+list_1[0] = "Art"
+
+print(list_1)
+print(list_2) # list_2 equals to list_1 so it would change as list_1 change
+```
+
+```{python}
+# Immutable
+tuple_1 = ("History", "Math", "Physics", "CompSci")
+tuple_2 = tuple_1
+
+print(tuple_1)
+print(tuple_2)
+
+# tuple_1[0] = "Art"
+# TypeError: 'tuple' object does not support item assignment
+```
+
+### Sets
+
+```{python}
+# Sets
+cs_courses = {'History', 'Math', 'Physics', 'CompSci'}
+print(cs_courses)
+
+cs_courses = {'History', 'Math', 'Physics', 'CompSci', 'Math'}
+print(cs_courses)
+
+print('Math' in cs_courses)
+```
+
+```{python}
+cs_courses = {'History', 'Math', 'Physics', 'CompSci'}
+art_courses = {'History', 'Math', 'Art', 'Design'}
+
+print(cs_courses.intersection(art_courses))
+print(cs_courses.difference(art_courses))
+print(cs_courses.union(art_courses))
+```
+
+```{python}
+# Empty Lists
+empty_list = []
+empty_list = list()
+
+# Empty Tuples
+empty_tuple = ()
+empty_tuple = tuple()
+
+# Empty Sets
+#empty_set = {} # This isn't right! It's a dict
+empty_set = set()
+```
+
+## Dictionaries - Working with Key-Value Pairs
+
+```{python}
+student = {'name':'Crispy', 'age':25, 'courses':['Math','CompSci']}
+print(student)
+print(student['courses'])
+# print(student['phone']) # KeyError: 'phone'
+print(student.get('phone'))
+print(student.get('phone','Not Found')) # 'Not Found' is a desired return for None
+
+student['phone']='555-5555-5555'
+print(student.get('phone','Not Found')) 
+
+student.update({'name':'Jane', 'age': 26, 'phone':'666-6666-6666'})
+print(student)
+
+student = {'name':'Crispy', 'age':25, 'courses':['Math','CompSci']}
+del student['age']
+print(student)
+
+student = {'name':'Crispy', 'age':25, 'courses':['Math','CompSci']}
+age = student.pop('age')
+print(student)
+print(age)
+```
+
+```{python}
+student = {'name':'Crispy', 'age':25, 'courses':['Math','CompSci']}
+print(len(student))
+print(student.keys())
+print(student.items())
+```
+
+```{python}
+for key in student:
+    print(key)
+```
+
+```{python}
+for key,value in student.items():
+    print(key,value)
+```
+
+## Conditionals and Booleans - If, Else, and Elif Statements
+
+```{python}
+if True:
+    print('Contitional was True')
+```
+
+```{python}
+if False:
+    print('Contitional was True')
+
+# nothing will be return if False
+```
+
+```{python}
+language = "python"
+
+if language == "python":
+    print("Contitional was True")
+
+#  `language == 'python'` equals to `True`
+```
+
+```{python}
+# Comparisons:
+# Equal:            ==
+# Not Equal:        !=
+# Greater Than:     >
+# Less Than:        <
+# Greater or Equal: >=
+# Less or Equal:    <=
+# Object Identity:  is
+
+```
+
+```{python}
+language = "python"
+if language == "python":
+    print("Language is Python")
+else:
+    print("No match")
+
+language = "JAVA"
+if language == "python":
+    print("Language is Python")
+elif language == "JAVA":
+    print("Language is JAVA")
+else:
+    print("No match")
+
+language = "R"
+if language == "python":
+    print("Language is Python")
+elif language == "JAVA":
+    print("Language is JAVA")
+else:
+    print("No match")
+```
+
+```{python}
+
+# and
+# or
+# not
+
+user = "Admin"
+logged_in = True
+if user == "Admin" and logged_in:
+    print("Admin Page")
+else:
+    print("Bad Creds")
+
+logged_in = False
+if not logged_in:
+    print("Please log in")
+else:
+    print("Welcome")
+```
+
+```{python}
+# Difference between `==` and `is`
+a = [1, 2, 3]
+b = [1, 2, 3]
+print(a == b)
+print(a is b)
+
+print(id(a))
+print(id(b))
+print(id(a) == id(b))
+```
+
+```{python}
+# False Values:
+# False
+# None
+# Zero of any numeric type
+# Any empty sequence. For example, '', (), [].
+# Any empty mapping. For example, {}.
+
+condition = False  # same as `None`, `0`, `''`, `{}`, ...
+if condition:
+    print("Evaluated to True")
+else:
+    print("Evaluated to False")
+
+# False will lead to else
+```
+
+```{python}
+condition = "Test"  # not False means True
+if condition:
+    print("Evaluated to True")
+else:
+    print("Evaluated to False")
+
+```
+
+## Loops and Iterations - For/While Loops
+
+```{python}
+nums = [1, 2, 3, 4, 5]
+
+for num in nums:
+    print(num)
+```
+
+```{python}
+nums = [1, 2, 3, 4, 5]
+
+for num in nums:
+    if num == 3:
+        print('Found!')
+        break # break statement: to stop the loops
+    print(num)
+```
+
+
+```{python}
+nums = [1, 2, 3, 4, 5]
+
+for num in nums:
+    if num == 3:
+        print('Found!')
+        continue # continue statement: continue to the next iteration
+    print(num)
+```
+
+
+```{python}
+# Nested list
+nums = [1, 2, 3, 4, 5]
+
+for num in nums:
+    for letter in "abc":
+        print(num, letter)
+
+# Give all the combinations
+```
+
+```{python}
+for i in range(10): # from 0 to 9 (10 not included)
+    print(i)
+```
+
+```{python}
+for i in range(1,11): # include 1 but not 11
+    print(i)
+```
+
+loop will stop only until a certen condition is met or we hit a break
+
+```{python}
+x = 0
+
+while x < 10:  # a certen condition is met
+    print(x)
+    x += 1
+```
+
+```{python}
+x = 0
+
+while x < 10:
+    if x == 5:
+        break  # hit a break
+    print(x)
+    x += 1
+```
+
+```{python}
+x = 0
+
+while True: # create an infinite loop
+    if x == 5:
+        break  # we must have a break statement otherwise it won't stop
+    # In those cases, use `Ctrl+C` to stop
+    print(x)
+    x += 1
+```
