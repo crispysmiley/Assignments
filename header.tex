@@ -1,0 +1,65 @@
+% ---------- Page layout ----------
+\usepackage{geometry}
+\geometry{
+  margin=1in
+}
+
+% ---------- Line spacing ----------
+\usepackage{setspace}
+\setstretch{2}
+
+% ---------- Section numbering depth ----------
+\setcounter{secnumdepth}{3}
+
+% ---------- Title formatting ----------
+\usepackage{titlesec}
+
+% Section (1)
+\titleformat{\section}
+  {\normalfont\large\bfseries}
+  {\thesection}
+  {1em}
+  {}
+
+\titlespacing*{\section}
+  {0pt}    % left
+  {2.0ex}  % space before
+  {1.0ex}  % space after
+
+% Subsection (1.1)
+\titleformat{\subsection}
+  {\normalfont\normalsize\bfseries}
+  {\thesubsection}
+  {1em}
+  {}
+
+\titlespacing*{\subsection}
+  {0pt}
+  {1.5ex}
+  {0.8ex}
+
+% Subsubsection (1.1.1)
+\titleformat{\subsubsection}
+  {\normalfont\normalsize}
+  {\thesubsubsection}
+  {1em}
+  {}
+
+\titlespacing*{\subsubsection}
+  {0pt}
+  {1.2ex}
+  {0.6ex}
+
+% ---------- Paragraph spacing ----------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% ---------- Code blocks ----------
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  breakatwhitespace=false,
+  frame=single,
+  columns=flexible
+}

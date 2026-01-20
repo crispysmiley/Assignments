@@ -2,14 +2,20 @@
 title: "Assignment-1"
 subtitle: "Notes from videos"
 author: Xiaoyi Cui
-format: pdf
+format:
+    pdf:
+        documentclass: article
+        pdf-engine: xelatex
+        include-in-header: header.tex
+        code-overflow: wrap
+number-sections: true   # or false
 ---
 
 # Positron
 
 ## Getting Started with Positron: A Quick Tour
 
-### Folder from Git
+### Folder from `Git`
 
 `File`-`New Folder from Git`-enter the http (e.g.: https://github.com/posit-dev/posit-conf-2025-positron-assistant-demo.git)
 
