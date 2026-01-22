@@ -1,0 +1,50 @@
+---
+title: "Causal 8607: Assignment 2"
+author: Sam Clark
+date: 2026-01-22
+format: pdf
+---
+
+# Format and due date
+
+Prepare this assignment by creating a Quarto markdown document and rendering it to **PDF** in the Positron integrated development environment (IDE). Upload your PDF document to the class CarmenCanvas website 'Assignment 2' by **23:59 on Thursday January 29**. 
+
+It is essential that you complete this assignmetn *before* class on January 29.
+
+# Python object-oriented programming
+
+Python is inherently an object-oriented langauge. Google's AI summary is a nice succinct description of what we mean by 'object-oriented':
+
+> "Object-Oriented Programming (OOP) is a software design model that organizes code around objects, which bundle related data (attributes/properties) and behavior (methods/functions) together, modeling real-world entities, making complex software modular, reusable, and easier to maintain. Key principles include Encapsulation (hiding data), Inheritance (sharing traits between classes), Abstraction (simplifying usage), ad Polymorphism (objects responding differently to the same command)."
+
+The text we use for this class is written by a computer scientist who takes advantage of Python's OOP features. For that reason, you will need to know at least the basics of how Python is written in OOP style. Following from last week, you will use Corey Shafer's series of instructional videos that explain Pythons OOP features.
+
+You are **required** to watch the series of videos below that cover the basic OOP features of Python. You will turn in a transcript of your work following along with the videos doing all the examples that they contain. Create a single Quarto document with sections for each video. Within each video's section create code blocks, and if you want, text to demonstrate and explain what you learned from the video. Render the final document to create an PDF document with your text and the results of running the code blocks. I want to see that you followed along, executed all the code, and understood what you were learning. You are free to organize your 'proof of learning' document as you wish. Remember that this video might be helpful as you get going on your Quarto document: [Your First Python Project in Positron](https://www.youtube.com/watch?v=Dw04bDgUTmg).
+
+**Required Python learning videos**
+
+* [Python OOP Tutorial 1: Classes and Instances](https://www.youtube.com/watch?v=ZDa-Z5JzLYM&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc). Time: 15:24. [Code snippets](https://github.com/CoreyMSchafer/code_snippets/blob/master/Object-Oriented/1-FirstClasses/oop.py).
+* [Python OOP Tutorial 2: Class Variables](https://www.youtube.com/watch?v=BJ-VvGyQxho&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=2). Time: 11:41. [Code snippets](https://github.com/CoreyMSchafer/code_snippets/blob/master/Object-Oriented/1-FirstClasses/oop.py).
+* [Python OOP Tutorial 3: Class Methods and Static Methods](https://www.youtube.com/watch?v=rq8cL2XMM5M&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=3). Time: 15:20. [Code snippets](https://github.com/CoreyMSchafer/code_snippets/blob/master/Object-Oriented/3-Class-Static-Methods/oop.py).
+* [Python OOP Tutorial 4: Inheritance - Creating Subclasses](https://www.youtube.com/watch?v=RSl87lqOXDE&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=4). Time: 19:40. [Code snippets 1](https://github.com/CoreyMSchafer/code_snippets/blob/master/Object-Oriented/4-Inheritance/oop.py). [Code snippets 2](https://github.com/CoreyMSchafer/code_snippets/blob/master/Object-Oriented/4-Inheritance/oop-finish.py).
+* [Python OOP Tutorial 5: Special (Magic/Dunder) Methods](https://www.youtube.com/watch?v=3ohzBxoFHAY&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=5). Time: 13:49. [Code snippets](https://github.com/CoreyMSchafer/code_snippets/blob/master/Object-Oriented/5-SpecialMethods/oop_test.py). 
+* [Python OOP Tutorial 6: Property Decorators - Getters, Setters, and Deleters](https://www.youtube.com/watch?v=jCzT9XFZ5bw&list=PL-osiE80TeTsqhIuOqKhwlXsIBIdSeYtc&index=6). Time: 9:32. [Code snippets](https://github.com/CoreyMSchafer/code_snippets/blob/master/Object-Oriented/6-property-decorator/oop.py).
+
+# Matplotlib
+
+Matplotlib is a Python module for plotting, and obviously, you need to learn how to make plots in Python! You are **required** to watch the Corey Shafer video below that covers the basics of matplotlib. Add to your Qaurto document transcript to cover what you learn and try out in this video. 
+
+* [Matplotlib Tutorial (Part 1): Creating and Customizing Our First Plots](https://www.youtube.com/watch?v=UO98lJQ3QGI&list=PL-osiE80TeTvipOqomVEeZ1HRrcEvtZB_). Time: 35:00. 
+
+Like all major Python modules, matplotlib has its own website with all the information you will ever need to use it: [https://matplotlib.org/stable/users/index](https://matplotlib.org/stable/users/index).
+
+# Plotnine
+
+Plotnine is another Python plotting module that builds on the 'grammar of graphics' concept, similar to ggplot in R. This module is less developed but could be very useful for those who are familiar with and like ggplot. You are **required** to watch the video below that covers the basics of matplotlib. Add to your Qaurto document transcript to cover what you learn and try out in this video. 
+
+* [Grammar of Graphics in Python with Plotnine - posit::conf(2023)](https://www.youtube.com/watch?v=q816IZuqVNo).
+
+Like matplotlib, plotnine has a website with all its documentationa: [https://plotnine.org/guide/introduction.html](https://plotnine.org/guide/introduction.html).
+
+
+

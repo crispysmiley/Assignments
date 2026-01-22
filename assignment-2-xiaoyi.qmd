@@ -1,0 +1,30 @@
+---
+title: "Assignment-1"
+subtitle: "Notes from videos"
+author: Xiaoyi Cui
+format:
+    pdf:
+        documentclass: article
+        pdf-engine: xelatex
+        include-in-header: header.tex
+        code-overflow: wrap
+number-sections: true   # or false
+---
+
+# Python object-oriented programming
+
+## Classes and Instances
+
+## Class Variables
+
+## Class Methods and Static Methods
+
+## Inheritance - Creating Subclasses
+
+## Special (Magic/Dunder) Methods
+
+## Property Decorators - Getters, Setters, and Deleters
+
+# Matplotlib: Creating and Customizing Our First Plots
+
+# Plotnine: Grammar of Graphics in Python with Plotnine - posit::conf(2023)

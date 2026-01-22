@@ -224,6 +224,13 @@ print(num_1 + num_2)
 
 ## Lists, Tuples, and Sets
 
+- A list is ordered, mutable (can change), and allows duplicates.
+- A tuple is ordered, immutable (cannot change), and allows duplicates. Faster than lists.
+- A set is unordered, mutable, and contains no duplicates. Fast for membership test.
+- A dictionary is Unordered (insertion-ordered since Python 3.7, but conceptually key-based), mutable, keys must be hashable, values can be anything
+
+![containing relationship](./pic/Snipaste_2026-01-22_16-53-10.png)
+
 ### Lists
 
 ```{python list}
@@ -436,6 +443,8 @@ for key in student:
 for key,value in student.items():
     print(key,value)
 ```
+
+- distionaries can be used to reture regression outcomes
 
 ## Conditionals and Booleans - If, Else, and Elif Statements
 
